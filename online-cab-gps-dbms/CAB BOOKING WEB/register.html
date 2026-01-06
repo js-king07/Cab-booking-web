@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OCB | Register</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("https://media.gettyimages.com/id/91647968/photo/illuminated-taxi-signs.jpg?s=612x612&w=0&k=20&c=7rmLfIwCZFGQyyCXtUUlfAk_t8feejqtEv7bkHWuA30=");
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+}
+
+/* Register Box */
+.container{
+    width:380px;
+    background:#fff;
+    padding:25px;
+    border-radius:6px;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#ffcc00;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+button:hover{
+    background:#e6b800;
+}
+
+p{
+    text-align:center;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<?php include 'navbar.php'; include 'db.php'; ?>
+
+<div class="container">
+    <h2>Create Account</h2>
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="pass" placeholder="Password" required>
+        <input type="password" name="cpass" placeholder="Confirm Password" required>
+
+        <button name="register">Register</button>
+    </form>
+
+<?php
+if(isset($_POST['register'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+    $cpass = $_POST['cpass'];
+
+</div>
+<!-- page1.html -->
+<a href="home.html"></a>
+
+</body>
+</html>
