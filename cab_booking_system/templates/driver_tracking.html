@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Driver Live Tracking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 12px 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<div class="info">
+    🚗 Driver Ravi Kumar<br>
+    📍 Arriving in <b>5 mins</b>
+</div>
+
+<script>
+let map;
+let driverMarker;
+
+// Sample route (Chennai)
+const route = [
+    { lat: 13.0827, lng: 80.2707 },
+    { lat: 13.0800, lng: 80.2730 },
+    { lat: 13.0770, lng: 80.2755 },
+    { lat: 13.0740, lng: 80.2780 }
+];
+
+let step = 0;
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: route[0],
+    });
+
+    driverMarker = new google.maps.Marker({
+        position: route[0],
+        map: map,
+        icon: "https://maps.google.com/mapfiles/kml/shapes/cabs.png"
+    });
+
+    setInterval(moveDriver, 2000);
+}
+
+function moveDriver() {
+    if (step < route.length) {
+        driverMarker.setPosition(route[step]);
+        map.panTo(route[step]);
+        step++;
+    }
+}
+</script>
+
+<!-- 🔑 Replace YOUR_API_KEY -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDexEdyAO9vXVfxVK9tAmJVCfGdsebpQgg&callback=initMap">
+</script>
+
+</body>
+</html>

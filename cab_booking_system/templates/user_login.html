@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-body">
+
+    <div class="login-box">
+        <h2>📱 Phone Verification</h2>
+        <p>Enter your phone number to receive OTP</p>
+
+        <form method="post">
+            <div class="input-group">
+                
+                <input type="tel" name="phone" required>
+                
+            </div>
+
+            <button type="submit">Send OTP</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<div class="dashboard">
+    <h2>🚖 Book Your Ride</h2>
+
+    <!-- Pickup & Drop -->
+    <div class="location-box">
+        <input id="pickup" type="text" placeholder="Pickup location">
+        <input id="destination" type="text" placeholder="Drop location">
+    </div>
+
+    <!-- Cab Type -->
+    <select id="cabType">
+        <option value="">Select Cab Type</option>
+        <option value="Bike">Bike</option>
+        <option value="Auto">Auto</option>
+        <option value="Mini">Mini</option>
+        <option value="Prime SUV">Prime SUV</option>
+    </select>
+
+    <!-- Ride Info -->
+    <div class="ride-info">
+        <p>Distance: <span id="distance">0</span> km</p>
+        <p>Estimated Fare: ₹ <span id="fare">0</span></p>
+    </div>
+
+    <div id="map"></div>
+
+    <button class="book-btn" onclick="calculateFare()">Book Ride</button>
+</div>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDexEdyAO9vXVfxVK9tAmJVCfGdsebpQgg&libraries=places&callback=initMap"
+    async defer>
+</script>
+
+<script src="{{ url_for('static', filename='gps.js') }}"></script>
+
+</body>
+</html>

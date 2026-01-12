@@ -1,0 +1,367 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Body Background ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Main Container Card ===== */
+.container {
+    background: #cdffa2;
+    width: 400px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===== Fade In Animation ===== */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== Headings ===== */
+h2, h3 {
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ===== Forms ===== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 6px rgba(102,126,234,0.4);
+}
+
+/* ===== Buttons ===== */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* ===== Cab List Cards ===== */
+.cab {
+    background: #66fe73;
+    border-left: 5px solid #4ad7fa;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.cab:hover {
+    background: #3d5ffa;
+}
+
+/* ===== Map Styling ===== */
+.dashboard {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.location-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #1d2671, #c33764);
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+/* ===== Text ===== */
+p {
+    text-align: center;
+    margin-top: 13px;
+    color: hsl(192, 33%, 97%);
+    font-size: 18px;
+}
+
+/* ===== Responsive for small screens ===== */
+@media (max-width: 450px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
+/* Role selection page */
+.role-body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.role-container {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.role-container h1 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.role-container p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.role-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.role-card {
+    width: 100%;
+    padding: 25px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.role-card h2 {
+    margin-bottom: 10px;
+}
+
+.role-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.role-card button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.role-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* User card */
+.role-card.user {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+/* Driver card */
+.role-card.driver {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: #222;
+}
+.input-group input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    font-size: 16px;
+}
+/* ---------- OTP PAGE BACKGROUND ---------- */
+.otp-wrapper {
+    height: 100vh;
+    background: linear-gradient(135deg, #4b3fd3, #f64f8b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- OTP CARD ---------- */
+.otp-container {
+    background: white;
+    width: 420px;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* ---------- HEADING ---------- */
+.otp-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* ---------- DIVIDER ---------- */
+.otp-container hr {
+    border: none;
+    height: 1px;
+    background: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* ---------- TEXT ---------- */
+.otp-text {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* ---------- OTP INPUT ---------- */
+.otp-container input {
+    width: 100%;
+    padding: 14px;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+/* ---------- BUTTON ---------- */
+.otp-container button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #3a49c9, #f64f8b);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.otp-container button:hover {
+    opacity: 0.9;
+}
+body {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.dashboard-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-container input,
+.dashboard-container select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.ride-info {
+    background: #f8f8f8;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+#map {
+    width: 100%;
+    height: 380px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #1d2671, #c33764);
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    opacity: 0.9;
+}

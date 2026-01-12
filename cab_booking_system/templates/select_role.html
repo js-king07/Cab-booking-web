@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Role</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="role-body">
+
+    <div class="role-container">
+        <h1>🚖 RYDEX CABS </h1>
+        <p>Select how you want to continue</p>
+
+        <div class="role-cards">
+            <a href="/user_login" class="role-card user">
+                <h2>👤 User</h2>
+                <p>Book rides easily & track drivers</p>
+                <button>Continue as User</button>
+            </a>
+
+            <a href="/driver_register" class="role-card driver">
+                <h2>🚕 Driver</h2>
+                <p>Register & accept ride requests</p>
+                <button>Continue as Driver</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

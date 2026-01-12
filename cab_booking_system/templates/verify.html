@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="otp-wrapper">
+    <div class="otp-container">
+        <h2>🔐 OTP Verification</h2>
+        <hr>
+        <p class="otp-text">
+            Enter the 4-digit OTP sent to your mobile number
+        </p>
+
+        <form method="post">
+            <input type="text" name="otp" maxlength="4"
+                   placeholder="• • • •" required>
+            <button type="submit">Verify OTP</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+
